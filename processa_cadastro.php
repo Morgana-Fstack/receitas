@@ -1,30 +1,9 @@
 <?php
-// Configuração para envio de e-mail (ajuste as informações de acordo com seu servidor SMTP)
-$to = "seu_email@example.com";
-$subject = "Novo Cadastro";
+declare(strict_types=1);
 
-// Recebendo os dados do formulário
-$nome = $_POST['nome'];
-$email = $_POST['e-mail'];
-$Endereço = $_POST['Endereço'];
-// ... outros campos ...
+http_response_code(410);
+header('Content-Type: application/json; charset=utf-8');
 
-// Montando o corpo do e-mail
-$message = "Novo cadastro:\n\n";
-$message .= "Nome: " . $nome . "\n";
-$message .= "Email: " . $email . "\n";
-$message .= "Endereço: " . $endereço . "\n";
-// ... outros campos ...
-
-// Headers do e-mail
-$headers = "From: Seu Nome <seu_email@example.com>\r\n";
-$headers .= "Reply-To: $email";
-
-if (mail($to, $subject, $message, $headers)) {
-    echo '<script>
-        alert("Cadastro realizado com sucesso! Um e-mail de confirmação foi enviado para o seu endereço.");
-        window.location.href = "pagina_de_agradecimento.html"; // Redireciona para uma página de agradecimento
-    </script>';
-} else {
-    echo "Erro ao enviar o e-mail. Por favor, tente novamente mais tarde.";
-}
+echo json_encode([
+    'error' => 'Endpoint desativado. O formulário atual é apenas uma demonstração local.',
+], JSON_UNESCAPED_UNICODE);
