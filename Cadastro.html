@@ -1,76 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="cadastro.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <nav>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <br>
-            <li><a href="Receitas.html">Receitas</a></li>
-            <br>
-            <li><a href="Cadastro.html">Cadastro</a></li>
-        </ul>
-    </nav>
-    <title>Formulário de Cadastro</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <style>
-           body {
-            background-color:  
- #20eb6d;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cadastre-se para acompanhar novidades do projeto Receitas da Morg.">
+  <title>Novidades | Receitas da Morg</title>
+  <link rel="stylesheet" href="cadastro.css">
 </head>
 <body>
-    <h1>Formulário de Cadastro</h1>
-    <form action="processa_cadastro.php" method="post"></form>
-    <form id="cadastroForm" onsubmit="return validateForm()">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+  <header class="site-header">
+    <a class="brand" href="index.html">Receitas da Morg</a>
+    <nav aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="Receitas.html">Receitas</a>
+      <a aria-current="page" href="Cadastro.html">Novidades</a>
+    </nav>
+  </header>
 
-        <label for="dataNascimento">Data de Nascimento:</label>
-        <input type="date" id="Data de Nascimento" name="Data de Nascimento" required>
+  <main class="section form-page">
+    <div class="section-heading">
+      <p class="eyebrow">Fique por dentro</p>
+      <h1>Receba novas receitas</h1>
+      <p>Esta é uma demonstração de formulário. Nenhum dado é enviado ou armazenado.</p>
+    </div>
 
-        <label for="E-mail">E-mail:</label>
-        <input type="text" id="E-mail" name="E-mail" required>
-
-        <label for="rua">Endereço Completo</label>
-        <input type="text" id="rua" name="Endereço Completo" required>
-
-        <label for="Cidade e Estado">Cidade e Estado:</label>
-        <input type="text" id="Cidade e Estado" name="Cidade e Estado" required>
-
-        <button type="submit">Cadastrar</button>
+    <form id="cadastroForm" class="signup-form">
+      <div>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" autocomplete="name" required>
+      </div>
+      <div>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+      <div>
+        <label for="preferencia">Receita preferida</label>
+        <select id="preferencia" name="preferencia">
+          <option value="">Selecione uma opção</option>
+          <option>Doces</option>
+          <option>Salgadas</option>
+          <option>Práticas</option>
+        </select>
+      </div>
+      <button class="button" type="submit">Cadastrar demonstração</button>
+      <p id="mensagem" class="form-message" role="status" aria-live="polite"></p>
     </form>
+  </main>
 
-    <div id="mensagem" style="display:none;"></div>
+  <footer>
+    <p>Receitas da Morg · Projeto desenvolvido por Morgana Petterle da Cunha</p>
+  </footer>
 
-    <script>
-        function validateForm() 
-        {
-            if (document.getElementById("email").value === "") {
-                alert("Por favor, preencha o campo Nome.");
-                return false;
-            }
-            document.getElementById("mensagem").textContent = "Cadastro realizado com sucesso!";
-            document.getElementById("mensagem").style.display = "block";
+  <script>
+    const form = document.getElementById('cadastroForm');
+    const message = document.getElementById('mensagem');
 
-            // Limpa o formulário (opcional)
-            document.getElementById("cadastroForm").reset();
-
-            return false; // Impede o envio padrão do formulário
-        }
-
-    </script>
-</body>
-<body>
-    <footer>
-        <p>&copy; 2024 Meu primeiro Site Cringe. Todos os direitos reservados.</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-</body>
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = document.getElementById('nome').value.trim();
+      message.textContent = `Obrigada, ${name}! Demonstração concluída com sucesso.`;
+      form.reset();
+    });
+  </script>
 </body>
 </html>
