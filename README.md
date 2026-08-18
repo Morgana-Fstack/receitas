@@ -15,15 +15,14 @@ Site responsivo de receitas desenvolvido com HTML, CSS e JavaScript. O projeto a
 - HTML5
 - CSS3
 - JavaScript
-- PHP apenas nos endpoints legados desativados
 
 ## Como executar
 
 Clone o repositório e abra `index.html` no navegador:
 
 ```bash
-git clone https://github.com/Morgana-Fstack/receitas.git
-cd receitas
+git clone https://github.com/Morgana-Fstack/receitas-da-morg.git
+cd receitas-da-morg
 ```
 
 Também é possível iniciar um servidor local:
@@ -36,7 +35,7 @@ Depois, acesse `http://localhost:8000`.
 
 ## Segurança e privacidade
 
-O formulário é apenas demonstrativo: os dados digitados não são enviados nem armazenados. Os endpoints PHP antigos foram desativados e não contêm endereços de e-mail pessoais.
+O formulário é apenas demonstrativo: os dados digitados não são enviados nem armazenados.
 
 ## Autora
 
