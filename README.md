@@ -10,6 +10,8 @@ A responsive recipe website built with HTML, CSS and JavaScript. It presents swe
 
 [Open Receitas da Morg on GitHub Pages](https://morgana-fstack.github.io/receitas-da-morg/)
 
+![Receitas da Morg home page](docs/receitas-da-morg-preview.jpg)
+
 ### Features
 
 - home page with featured recipes;
@@ -54,6 +56,8 @@ Site responsivo de receitas desenvolvido com HTML, CSS e JavaScript. O projeto a
 ### Demonstração online
 
 [Acesse o Receitas da Morg no GitHub Pages](https://morgana-fstack.github.io/receitas-da-morg/)
+
+![Página inicial do Receitas da Morg](docs/receitas-da-morg-preview.jpg)
 
 ### Funcionalidades
 
