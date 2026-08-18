@@ -6,6 +6,10 @@
 
 A responsive recipe website built with HTML, CSS and JavaScript. It presents sweet and savory recipes, ingredients and preparation steps in a simple, accessible interface.
 
+### Live demo
+
+[Open Receitas da Morg on GitHub Pages](https://morgana-fstack.github.io/receitas-da-morg/)
+
 ### Features
 
 - home page with featured recipes;
@@ -46,6 +50,10 @@ The form is for demonstration purposes only. Entered data is neither transmitted
 ## Português
 
 Site responsivo de receitas desenvolvido com HTML, CSS e JavaScript. O projeto apresenta pratos doces e salgados, ingredientes e modos de preparo em uma interface simples e acessível.
+
+### Demonstração online
+
+[Acesse o Receitas da Morg no GitHub Pages](https://morgana-fstack.github.io/receitas-da-morg/)
 
 ### Funcionalidades
 
